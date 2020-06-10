@@ -1,0 +1,66 @@
+{
+  "name": "retext-preset-stoicism",
+  "version": "0.0.1",
+  "description": "Text processor for the Stoicism Compendium",
+  "license": "BlueOak-1.0.0",
+  "keywords": [
+    "retext",
+    "preset",
+    "stoicism"
+  ],
+  "repository": "stoicism-compendium/retext-preset-stoicism",
+  "bugs": "https://github.com/stoicism-compendium/retext-preset-stoicism/issues",
+  "author": "Sean Leather (https://github.com/spl)",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "dictionary-en": "^3.0.0",
+    "retext-contractions": "^4.0.0",
+    "retext-diacritics": "^3.0.0",
+    "retext-indefinite-article": "^2.0.1",
+    "retext-quotes": "^4.0.0",
+    "retext-redundant-acronyms": "^3.0.0",
+    "retext-repeated-words": "^3.0.0",
+    "retext-sentence-spacing": "^4.0.0",
+    "retext-spell": "^4.0.0"
+  },
+  "devDependencies": {
+    "depcheck": "^0.9.2",
+    "prettier": "^2.0.5",
+    "remark-cli": "^8.0.0",
+    "xo": "^0.32.0"
+  },
+  "scripts": {
+    "depcheck": "depcheck",
+    "prettier:test": "prettier --check '**/*.js'",
+    "prettier:format": "prettier --write '**/*.js'",
+    "remark:test": "remark --quiet --frail .",
+    "remark:format": "remark --output --quiet --frail .",
+    "xo:test": "xo",
+    "xo:format": "xo --fix",
+    "format": "npm run prettier:format && npm run remark:format && npm run xo:format",
+    "test": "npm run depcheck && npm run prettier:test && npm run remark:test && npm run xo:test"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "remarkConfig": {
+    "settings": {
+      "bullet": "*",
+      "emphasis": "_",
+      "listItemIndent": "1",
+      "rule": "-",
+      "strong": "*",
+      "tightDefinitions": true
+    }
+  },
+  "xo": {
+    "prettier": true
+  }
+}
