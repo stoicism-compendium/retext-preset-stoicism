@@ -27,29 +27,45 @@
   },
   "devDependencies": {
     "depcheck": "^0.9.2",
-    "prettier": "^2.0.5",
-    "remark-cli": "^8.0.0",
-    "xo": "^0.32.0"
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "remark-cli": "^8.0.0"
   },
   "scripts": {
     "depcheck": "depcheck",
-    "prettier:test": "prettier --check '**/*.js'",
-    "prettier:format": "prettier --write '**/*.js'",
     "remark:test": "remark --quiet --frail .",
     "remark:format": "remark --output --quiet --frail .",
-    "xo:test": "xo",
-    "xo:format": "xo --fix",
-    "format": "npm run prettier:format && npm run remark:format && npm run xo:format",
-    "test": "npm run depcheck && npm run prettier:test && npm run remark:test && npm run xo:test"
+    "eslint:test": "eslint '**/*.js'",
+    "eslint:format": "eslint --fix '**/*.js'",
+    "format": "npm run eslint:format && npm run remark:format && npm run eslint:format",
+    "test": "npm run depcheck && npm run eslint:test && npm run remark:test && npm run eslint:test"
   },
-  "prettier": {
-    "bracketSpacing": false,
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "standard"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 11
+    },
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "never"
+      ]
+    }
   },
+  "eslintIgnore": [
+    "node_modules"
+  ],
   "remarkConfig": {
     "settings": {
       "bullet": "*",
@@ -59,8 +75,5 @@
       "strong": "*",
       "tightDefinitions": true
     }
-  },
-  "xo": {
-    "prettier": true
   }
 }
