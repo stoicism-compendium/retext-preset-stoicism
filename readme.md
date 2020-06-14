@@ -6,30 +6,34 @@
 
 > Text processor for the Stoicism Compendium.
 
-This is a [retext][] [preset][] defining a number of [warnings][].
+This is a [**retext**][retext] [preset][] defining a number of
+[warnings](#warnings).
 
 <!-- Sections -->
 
-## Installation
+## Installing and Configuring
 
-[npm][]:
+The following instructions describe one way of using this package with
+[**npm**][npm].
 
-```sh
-npm install --save-dev retext-preset-stoicism
-```
+1. Install this package as a [development dependency][npm-dependencies]:
+
+   ```sh
+   npm install --save-dev retext-preset-stoicism
+   ```
 
 ## Warnings
 
 Each of the following plugins is configured to emit warnings for the issue
 mentioned: <!-- sorted alphabetically -->
 
-* [retext-contractions][]: incorrect apostrophes in contractions
-* [retext-diacritics][]: incorrect diacritics
-* [retext-indefinite-article][]: incorrect indefinite articles
-* [retext-quotes][]: “straight” instead of “smart” quotes and apostrophes
-* [retext-redundant-acronyms][]: redundant acronyms
-* [retext-repeated-words][]: repeated words
-* [retext-sentence-spacing][]: number of spaces between sentences ≠ 1
+* [retext-contractions][] – incorrect apostrophes in contractions
+* [retext-diacritics][] – incorrect diacritics
+* [retext-indefinite-article][] – incorrect indefinite articles
+* [retext-quotes][] – “straight” instead of “smart” quotes and apostrophes
+* [retext-redundant-acronyms][] – redundant acronyms
+* [retext-repeated-words][] – repeated words
+* [retext-sentence-spacing][] – number of spaces between sentences ≠ 1
 
 ## License
 
@@ -39,6 +43,7 @@ mentioned: <!-- sorted alphabetically -->
 
 [author]: https://github.com/spl
 [license]: ./license.md
+[npm-dependencies]: https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file
 [npm]: https://docs.npmjs.com/cli/install
 [preset]: https://github.com/unifiedjs/unified#preset
 [retext-contractions]: https://github.com/retextjs/retext-contractions
@@ -49,4 +54,3 @@ mentioned: <!-- sorted alphabetically -->
 [retext-repeated-words]: https://github.com/retextjs/retext-repeated-words
 [retext-sentence-spacing]: https://github.com/retextjs/retext-sentence-spacing
 [retext]: https://github.com/retextjs/retext
-[warnings]: #warnings
