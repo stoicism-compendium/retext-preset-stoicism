@@ -18,12 +18,15 @@
     "dictionary-en": "^3.0.0",
     "retext-contractions": "^4.0.0",
     "retext-diacritics": "^3.0.0",
+    "retext-emoji": "^7.0.1",
+    "retext-english": "^3.0.4",
     "retext-indefinite-article": "^2.0.1",
     "retext-quotes": "^4.0.0",
     "retext-redundant-acronyms": "^3.0.0",
     "retext-repeated-words": "^3.0.0",
     "retext-sentence-spacing": "^4.0.0",
-    "retext-spell": "^4.0.0"
+    "retext-spell-file": "git+https://github.com/stoicism-compendium/retext-spell-file.git",
+    "retext-syntax-urls": "^2.0.0"
   },
   "devDependencies": {
     "depcheck": "^0.9.2",
