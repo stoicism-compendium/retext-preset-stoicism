@@ -41,12 +41,12 @@
   },
   "scripts": {
     "depcheck": "depcheck",
-    "remark:test": "remark --quiet --frail .",
-    "remark:format": "remark --output --quiet --frail .",
-    "eslint:test": "eslint '**/*.js'",
-    "eslint:format": "eslint --fix '**/*.js'",
-    "format": "npm run eslint:format && npm run remark:format && npm run eslint:format",
-    "test": "npm run depcheck && npm run eslint:test && npm run remark:test && npm run eslint:test"
+    "format": "npm run format-md && npm run format-js",
+    "format-js": "eslint --fix '**/*.js'",
+    "format-md": "remark --output --quiet --frail .",
+    "test": "npm run test-md && npm run test-js && npm run depcheck",
+    "test-js": "eslint '**/*.js'",
+    "test-md": "remark --quiet --frail ."
   },
   "eslintConfig": {
     "root": true,
