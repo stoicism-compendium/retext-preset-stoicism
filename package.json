@@ -36,7 +36,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "remark-cli": "^8.0.0"
+    "remark-cli": "^8.0.0",
+    "remark-preset-stoicism": "git+https://github.com/stoicism-compendium/remark-preset-stoicism.git"
   },
   "scripts": {
     "depcheck": "depcheck",
@@ -68,15 +69,5 @@
   },
   "eslintIgnore": [
     "node_modules"
-  ],
-  "remarkConfig": {
-    "settings": {
-      "bullet": "*",
-      "emphasis": "_",
-      "listItemIndent": "1",
-      "rule": "-",
-      "strong": "*",
-      "tightDefinitions": true
-    }
-  }
+  ]
 }
