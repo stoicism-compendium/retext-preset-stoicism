@@ -2,6 +2,8 @@
 
 <!-- Badges -->
 
+![tests][tests-badge]
+
 <!-- Brief description -->
 
 > Text processor for the Stoicism Compendium.
@@ -54,3 +56,4 @@ mentioned: <!-- sorted alphabetically -->
 [retext-repeated-words]: https://github.com/retextjs/retext-repeated-words
 [retext-sentence-spacing]: https://github.com/retextjs/retext-sentence-spacing
 [retext]: https://github.com/retextjs/retext
+[tests]: https://github.com/stoicism-compendium/retext-preset-stoicism/workflows/tests/badge.svg
