@@ -15,7 +15,7 @@
     "index.js"
   ],
   "dependencies": {
-    "dictionary-en": "^3.0.0",
+    "dictionary-en": "^3.0.1",
     "retext-contractions": "^4.0.0",
     "retext-diacritics": "^3.0.0",
     "retext-emoji": "^7.0.1",
