@@ -25,7 +25,7 @@
     "retext-redundant-acronyms": "^3.0.0",
     "retext-repeated-words": "^3.0.0",
     "retext-sentence-spacing": "^4.0.0",
-    "retext-spell-file": "git+https://github.com/stoicism-compendium/retext-spell-file.git",
+    "retext-spell-file": "^0.0.1",
     "retext-syntax-urls": "^2.0.0"
   },
   "devDependencies": {
