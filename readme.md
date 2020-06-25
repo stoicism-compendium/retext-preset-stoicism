@@ -80,7 +80,7 @@ Markdown files:
 
 ```json
 "scripts": {
-  "check-md": "remark --quiet --frail .",
+  "check-md": "remark --quiet --frail ."
 }
 ```
 
