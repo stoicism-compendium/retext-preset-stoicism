@@ -2,7 +2,7 @@
 
 <!-- Badges -->
 
-![tests][tests-badge]
+![test][test-badge]
 
 <!-- Brief description -->
 
@@ -112,6 +112,6 @@ npm run check-md
 [preset]: https://github.com/unifiedjs/unified#preset
 [remark-cli]: https://github.com/remarkjs/remark/tree/main/packages/remark-cli
 [retext]: https://github.com/retextjs/retext
-[tests-badge]: https://github.com/stoicism-compendium/retext-preset-stoicism/workflows/tests/badge.svg
+[test-badge]: https://github.com/stoicism-compendium/retext-preset-stoicism/workflows/test/badge.svg
 [unified-engine-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 [yarn]: https://yarnpkg.com/
