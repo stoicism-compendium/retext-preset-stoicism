@@ -44,7 +44,7 @@ Alternatives include [`yarn`][yarn] instead of `npm`.
 
 ## Installation
 
-Install `retext-preset-stoicism` and other dependencies as a [developer
+Install `retext-preset-stoicism` and other dependencies as a [development
 dependency][npm-dependencies]:
 
 ```sh
