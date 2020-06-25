@@ -19,28 +19,76 @@ Each of the plugins is configured to emit a warning for the issue mentioned:
 
 | Plugin                          | Issue                                                |
 | ------------------------------- | ---------------------------------------------------- |
-| [`retext-contractions`][]       | incorrect apostrophes in contractions                |
-| [`retext-diacritics`][]         | incorrect diacritics                                 |
-| [`retext-indefinite-article`][] | incorrect indefinite articles                        |
-| [`retext-quotes`][]             | “straight” instead of “smart” quotes and apostrophes |
-| [`retext-redundant-acronyms`][] | redundant acronyms                                   |
-| [`retext-repeated-words`][]     | repeated words                                       |
-| [`retext-sentence-spacing`][]   | number of spaces between sentences ≠ 1               |
+| [`retext-contractions`][]       | Incorrect apostrophes in contractions                |
+| [`retext-diacritics`][]         | Incorrect diacritics                                 |
+| [`retext-indefinite-article`][] | Incorrect indefinite articles                        |
+| [`retext-quotes`][]             | “Straight” quotes and apostrophes instead of “smart” |
+| [`retext-redundant-acronyms`][] | Redundant acronyms                                   |
+| [`retext-repeated-words`][]     | Repeated words                                       |
+| [`retext-sentence-spacing`][]   | Number of spaces between sentences ≠ 1               |
 
 </details>
 
+`retext-preset-stoicism` is used by [`remark-preset-stoicism`][] to check
+Markdown text in the Stoicism Compendium.
+
 <!-- Sections -->
 
-## Installing and Configuring
+## Prerequisites
 
-The following instructions describe one way of using this package with
-[**`npm`**][npm-cli].
+In the following sections, we describe how to install `retext-preset-stoicism`
+with [`npm`][npm-cli] and how to use it with [`remark`][remark-cli] to check
+Markdown files.
 
-1. Install this package as a [development dependency][npm-dependencies]:
+Alternatives include [`yarn`][yarn] instead of `npm`.
 
-   ```sh
-   npm install --save-dev retext-preset-stoicism
-   ```
+## Installation
+
+Install `retext-preset-stoicism` and other dependencies as a [developer
+dependency][npm-dependencies]:
+
+```sh
+npm install --save-dev \
+  retext-preset-stoicism \
+  remark-cli \
+  remark-retext \
+  unified
+```
+
+## Usage
+
+### Configuration
+
+Create a file called [`.remark.js`][unified-engine-config]:
+
+```js
+exports.plugins = [
+  [
+    require('remark-retext'),
+    require('unified')().use(require('retext-preset-stoicism')),
+  ]
+]
+```
+
+See [`remark-preset-stoicism`][] for how `retext-preset-stoicism` is used along
+with a number of other `remark` plugins and settings.
+
+### Script
+
+Define a [script][npm-run-script] in your `package.json` to run `remark` on your
+Markdown files:
+
+```json
+"scripts": {
+  "check-md": "remark --quiet --frail .",
+}
+```
+
+Run the script with `npm run`:
+
+```sh
+npm run check-md
+```
 
 ## License
 
@@ -48,11 +96,7 @@ The following instructions describe one way of using this package with
 
 <!-- Definitions, sorted alphabetically -->
 
-[author]: https://github.com/spl
-[license]: ./license.md
-[npm-dependencies]: https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file
-[npm-cli]: https://docs.npmjs.com/cli/install
-[preset]: https://github.com/unifiedjs/unified#preset
+[`remark-preset-stoicism`]: https://github.com/stoicism-compendium/remark-preset-stoicism
 [`retext-contractions`]: https://github.com/retextjs/retext-contractions
 [`retext-diacritics`]: https://github.com/retextjs/retext-diacritics
 [`retext-indefinite-article`]: https://github.com/retextjs/retext-indefinite-article
@@ -60,5 +104,14 @@ The following instructions describe one way of using this package with
 [`retext-redundant-acronyms`]: https://github.com/retextjs/retext-redundant-acronyms
 [`retext-repeated-words`]: https://github.com/retextjs/retext-repeated-words
 [`retext-sentence-spacing`]: https://github.com/retextjs/retext-sentence-spacing
+[author]: https://github.com/spl
+[license]: ./license.md
+[npm-cli]: https://docs.npmjs.com/cli/install
+[npm-dependencies]: https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file
+[npm-run-script]: https://docs.npmjs.com/cli/run-script
+[preset]: https://github.com/unifiedjs/unified#preset
+[remark-cli]: https://github.com/remarkjs/remark/tree/main/packages/remark-cli
 [retext]: https://github.com/retextjs/retext
 [tests-badge]: https://github.com/stoicism-compendium/retext-preset-stoicism/workflows/tests/badge.svg
+[unified-engine-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
+[yarn]: https://yarnpkg.com/
