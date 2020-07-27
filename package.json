@@ -37,7 +37,7 @@
     "eslint-plugin-standard": "*",
     "prettier": "*",
     "remark-cli": "^8.0.1",
-    "remark-preset-stoicism": "^0.0.1",
+    "remark-preset-stoicism": "^0.0.2",
     "stoicism-js-style": "^0.0.1"
   },
   "scripts": {
