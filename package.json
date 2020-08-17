@@ -29,8 +29,9 @@
     "retext-syntax-urls": "^2.0.0"
   },
   "devDependencies": {
-    "depcheck": "^1.0.0",
+    "depcheck": "^1.2.0",
     "eslint": "*",
+    "eslint-config-standard": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-node": "*",
     "eslint-plugin-promise": "*",
